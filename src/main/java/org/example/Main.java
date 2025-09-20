@@ -1,25 +1,25 @@
 package org.example;
+
 import org.example.Bai2.QLCB;
 
 import java.util.Scanner;
 
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc213 = new Scanner(System.in);
 
-        QLCB qlcb = new QLCB();
+        QLCB qlcb213 = new QLCB();
 
-        qlcb.nhapDanhSach(sc);
+        // Nhập danh sách cán bộ
+        qlcb213.nhapDanhSach213(sc213);
 
+        // Tìm kiếm theo họ tên
         System.out.print("Nhap vao ho ten can tim kiem: ");
-        String name = sc.nextLine();
+        String name213 = sc213.nextLine();
 
-        qlcb.timKiemCanBo(name);
+        qlcb213.timKiemCanBo213(name213);
 
-        // huy sc
-        sc.close();
+        // Hủy scanner
+        sc213.close();
     }
 }

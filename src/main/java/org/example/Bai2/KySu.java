@@ -3,31 +3,36 @@ package org.example.Bai2;
 import java.util.Scanner;
 
 public class KySu extends CanBo {
-    private String nghanhDaoTao;
+    private String nganhDaoTao213;
 
-    // Constructor không tham số (bắt buộc phải có nếu tạo new KySu() mà không truyền gì)
+    // Constructor không tham số
     public KySu() {
-        super(); // Gọi constructor không tham số của CanBo
+        super();
     }
 
-    // Constructor đầy đủ (nếu muốn tạo nhanh 1 đối tượng có đủ dữ liệu)
-    public KySu(String hoTen, String ngaySinh, String gioiTinh, String diaChi, String nghanhDaoTao) {
-        super(hoTen, ngaySinh, gioiTinh, diaChi);
-        this.nghanhDaoTao = nghanhDaoTao;
+    // Constructor đầy đủ
+    public KySu(String hoTen213, String ngaySinh213, String gioiTinh213, String diaChi213, String nganhDaoTao213) {
+        super(hoTen213, ngaySinh213, gioiTinh213, diaChi213);
+        this.nganhDaoTao213 = nganhDaoTao213;
     }
 
     // Ghi đè hàm nhập thông tin
     @Override
-    public void nhapThongTin(Scanner sc) {
-        super.nhapThongTin(sc);
+    public void nhapThongTin213(Scanner sc213) {
+        super.nhapThongTin213(sc213);
         System.out.print("\tNhap nganh dao tao: ");
-        nghanhDaoTao = sc.nextLine();
+        nganhDaoTao213 = sc213.nextLine();
     }
 
     // Ghi đè hàm hiển thị thông tin
     @Override
-    public void hienThiThongTin() {
-        super.hienThiThongTin();
-        System.out.println("\tNganh dao tao: " + nghanhDaoTao);
+    public void hienThiThongTin213() {
+        super.hienThiThongTin213();
+        System.out.println("\tNganh dao tao: " + nganhDaoTao213);
+    }
+
+    // Getter nếu cần
+    public String getNganhDaoTao213() {
+        return nganhDaoTao213;
     }
 }

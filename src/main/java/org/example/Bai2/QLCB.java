@@ -1,69 +1,79 @@
 package org.example.Bai2;
 
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class QLCB {
-    // thuoc tinh
-    private ArrayList<CanBo> dscb;
+    // Thuộc tính
+    private ArrayList<CanBo> dscb213;
 
-    // phuong thuc
-    // ham khoi tao
+    // Hàm khởi tạo
     public QLCB() {
-        dscb = new ArrayList<CanBo>(10);
+        dscb213 = new ArrayList<CanBo>(10);
     }
 
-    // ham them can bo
-    public void themCanBo(CanBo cb) {
-        dscb.add(cb);
+    // Hàm thêm cán bộ
+    public void themCanBo213(CanBo cb213) {
+        dscb213.add(cb213);
     }
 
-    // ham nhap danh sach
-    public void nhapDanhSach(Scanner sc) {
-        CanBo cb;
+    // Hàm nhập danh sách
+    public void nhapDanhSach213(Scanner sc213) {
+        CanBo cb213;
         System.out.print("Nhap vao so luong can bo: ");
-        int n = sc.nextInt();
-        sc.nextLine();
+        int n213 = sc213.nextInt();
+        sc213.nextLine();
 
         System.out.println("Nhap thong tin chi tiet:");
-        for (int i = 0; i < n; i++) {
-            System.out.println("Lan nhap thu " + (i + 1) + ":");
-            System.out.print("Chon can bo (1-KySu; 2-NhanVien;3-CongNhan): ");
-            int chon = sc.nextInt();
-            sc.nextLine();
+        for (int i213 = 0; i213 < n213; i213++) {
+            System.out.println("Lan nhap thu " + (i213 + 1) + ":");
+            System.out.print("Chon can bo (1-KySu; 2-NhanVien; 3-CongNhan): ");
+            int chon213 = sc213.nextInt();
+            sc213.nextLine();
 
-            cb = new CanBo();
+            cb213 = new CanBo(); // Khởi tạo tạm thời
 
-            switch (chon) {
+            switch (chon213) {
                 case 1:
-                    cb = new KySu();
+                    cb213 = new KySu();
                     break;
                 case 2:
-                    cb = new NhanVien();
+                    cb213 = new NhanVien();
                     break;
                 case 3:
-                    cb = new CongNhan();
+                    cb213 = new CongNhan();
                     break;
-
                 default:
-                    cb = new KySu();
+                    System.out.println("Lua chon khong hop le! Mac dinh la KySu.");
+                    cb213 = new KySu();
                     break;
             }
 
-            // sau khi chon loai can bo thi nhap thong tin cho can bo do
-            cb.nhapThongTin(sc);
+            // Nhập thông tin tương ứng
+            if (cb213 instanceof KySu) {
+                ((KySu) cb213).nhapThongTin213(sc213);
+            } else if (cb213 instanceof NhanVien) {
+                ((NhanVien) cb213).nhapThongTin213(sc213);
+            } else if (cb213 instanceof CongNhan) {
+                ((CongNhan) cb213).nhapThongTin213(sc213);
+            }
 
-            // nhap xong roi thi them can bo vao danh sach
-            themCanBo(cb);
+            // Thêm cán bộ vào danh sách
+            themCanBo213(cb213);
         }
     }
 
-    // ham tim kiem theo ten
-    public void timKiemCanBo(String hoTen) {
-        for (CanBo cb : dscb) {
-            if (hoTen.equals(cb.getHoTen())) {
-                cb.hienThiThongTin();
+    // Hàm tìm kiếm theo tên
+    public void timKiemCanBo213(String hoTen213) {
+        for (CanBo cb213 : dscb213) {
+            if (hoTen213.equals(cb213.getHoTen213())) {
+                if (cb213 instanceof KySu) {
+                    ((KySu) cb213).hienThiThongTin213();
+                } else if (cb213 instanceof NhanVien) {
+                    ((NhanVien) cb213).hienThiThongTin213();
+                } else if (cb213 instanceof CongNhan) {
+                    ((CongNhan) cb213).hienThiThongTin213();
+                }
             }
         }
     }

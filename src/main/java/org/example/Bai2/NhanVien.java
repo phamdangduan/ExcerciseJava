@@ -1,29 +1,32 @@
 package org.example.Bai2;
 
-
-
 import java.util.Scanner;
 
 public class NhanVien extends CanBo {
-    private String congViec;
+    private String congViec213;
 
-    public NhanVien(String hoTen, String ngaySinh, String gioiTinh, String diaChi, String congViec) {
-        super(hoTen, ngaySinh, gioiTinh, diaChi);
-        this.congViec = congViec;
+    public NhanVien(String hoTen213, String ngaySinh213, String gioiTinh213, String diaChi213, String congViec213) {
+        super(hoTen213, ngaySinh213, gioiTinh213, diaChi213);
+        this.congViec213 = congViec213;
     }
 
-    public NhanVien(){
+    public NhanVien() {
         super();
     }
 
-    public void nhapThongTin(Scanner sc) {
-        super.nhapThongTin(sc);
+    public void nhapThongTin213(Scanner sc213) {
+        super.nhapThongTin213(sc213);
         System.out.print("\tNhap cong viec: ");
-        congViec = sc.nextLine();
+        congViec213 = sc213.nextLine();
     }
 
-    public void hienThiThongTin() {
-        super.hienThiThongTin();
-        System.out.println("\tCong viec: " + congViec);
+    public void hienThiThongTin213() {
+        super.hienThiThongTin213();
+        System.out.println("\tCong viec: " + congViec213);
+    }
+
+    // Getter nếu cần
+    public String getCongViec213() {
+        return congViec213;
     }
 }

@@ -3,17 +3,17 @@ package org.example.Bai2;
 import java.util.Scanner;
 
 public class CanBo {
-    private String hoTen;
-    private String ngaySinh;
-    private String gioiTinh;
-    private String diaChi;
+    private String hoTen213;
+    private String ngaySinh213;
+    private String gioiTinh213;
+    private String diaChi213;
 
     // Constructor có tham số
-    public CanBo(String hoTen, String ngaySinh, String gioiTinh, String diaChi) {
-        this.hoTen = hoTen;
-        this.ngaySinh = ngaySinh;
-        this.gioiTinh = gioiTinh;
-        this.diaChi = diaChi;
+    public CanBo(String hoTen213, String ngaySinh213, String gioiTinh213, String diaChi213) {
+        this.hoTen213 = hoTen213;
+        this.ngaySinh213 = ngaySinh213;
+        this.gioiTinh213 = gioiTinh213;
+        this.diaChi213 = diaChi213;
     }
 
     // Constructor không tham số
@@ -21,40 +21,39 @@ public class CanBo {
     }
 
     // Nhập thông tin
-    public void nhapThongTin(Scanner sc) {
+    public void nhapThongTin213(Scanner sc213) {
         System.out.print("Moi nhap ho ten: ");
-        hoTen = sc.nextLine();
+        hoTen213 = sc213.nextLine();
         System.out.print("Moi nhap ngay sinh: ");
-        ngaySinh = sc.nextLine();
+        ngaySinh213 = sc213.nextLine();
         System.out.print("Moi nhap gioi tinh: ");
-        gioiTinh = sc.nextLine();
+        gioiTinh213 = sc213.nextLine();
         System.out.print("Moi nhap dia chi: ");
-        diaChi = sc.nextLine();
+        diaChi213 = sc213.nextLine();
     }
 
     // Hiển thị thông tin
-    public void hienThiThongTin() {
-        System.out.println("\tHo ten: " + hoTen);
-        System.out.println("\tNgay sinh: " + ngaySinh);
-        System.out.println("\tGioi tinh: " + gioiTinh);
-        System.out.println("\tDia chi: " + diaChi);
+    public void hienThiThongTin213() {
+        System.out.println("\tHo ten: " + hoTen213);
+        System.out.println("\tNgay sinh: " + ngaySinh213);
+        System.out.println("\tGioi tinh: " + gioiTinh213);
+        System.out.println("\tDia chi: " + diaChi213);
     }
 
     // Getter
-    public String getHoTen() {
-        return this.hoTen;
+    public String getHoTen213() {
+        return this.hoTen213;
     }
 
-    // Các getter khác nếu cần
-    public String getNgaySinh() {
-        return this.ngaySinh;
+    public String getNgaySinh213() {
+        return this.ngaySinh213;
     }
 
-    public String getGioiTinh() {
-        return this.gioiTinh;
+    public String getGioiTinh213() {
+        return this.gioiTinh213;
     }
 
-    public String getDiaChi() {
-        return this.diaChi;
+    public String getDiaChi213() {
+        return this.diaChi213;
     }
 }
