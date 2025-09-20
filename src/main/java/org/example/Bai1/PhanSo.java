@@ -3,112 +3,106 @@ package org.example.Bai1;
 import java.util.Scanner;
 
 public class PhanSo {
-    // thuoc tinh
-    private int tuSo;
-    private int mauSo;
+    // Thuộc tính
+    private int tuSo213;
+    private int mauSo213;
 
-    // phuong thuc
-    // ham khoi tao khong doi so
+    // Hàm khởi tạo không đối số
     public PhanSo() {
-        tuSo = 0;
-        mauSo = 1;
+        tuSo213 = 0;
+        mauSo213 = 1;
     }
 
-    // ham khoi tao co doi so
-    public PhanSo(int tuSo, int mauSo) {
-        this.tuSo = tuSo;
-        this.mauSo = mauSo;
+    // Hàm khởi tạo có đối số
+    public PhanSo(int tuSo213, int mauSo213) {
+        this.tuSo213 = tuSo213;
+        this.mauSo213 = mauSo213;
     }
 
-    // ham nhap phan so
-    public void nhapPS(Scanner sc) {
-        int a;
-        int b;
+    // Hàm nhập phân số
+    public void nhapPS213(Scanner sc213) {
+        int a213;
+        int b213;
 
         do {
             System.out.print("\tNhap vao tu so: ");
-            a = sc.nextInt();
+            a213 = sc213.nextInt();
 
             System.out.print("\tNhap vao mau so: ");
-            b = sc.nextInt();
+            b213 = sc213.nextInt();
 
-            // kiem tra
-            if (b == 0) {
+            if (b213 == 0) {
                 System.out.println("Mau so khong duoc bang 0. Hay nhap lai!");
             } else {
-                tuSo = a;
-                mauSo = b;
+                tuSo213 = a213;
+                mauSo213 = b213;
             }
-        } while (b == 0);
+        } while (b213 == 0);
     }
 
-    // ham hien thi
-    public void hienThiPS() {
-        if (tuSo * mauSo < 0) {
-            System.out.println("\t-" + Math.abs(tuSo) + "/" + Math.abs(mauSo));
+    // Hàm hiển thị phân số
+    public void hienThiPS213() {
+        if (tuSo213 * mauSo213 < 0) {
+            System.out.println("\t-" + Math.abs(tuSo213) + "/" + Math.abs(mauSo213));
         } else {
-            System.out.println("\t" + Math.abs(tuSo) + "/" + Math.abs(mauSo));
+            System.out.println("\t" + Math.abs(tuSo213) + "/" + Math.abs(mauSo213));
         }
     }
 
-    // ham cong
-    public PhanSo congPS(PhanSo ps2) {
-        int a = tuSo * ps2.mauSo + ps2.tuSo * mauSo;
-        int b = mauSo * ps2.mauSo;
+    // Hàm cộng phân số
+    public PhanSo congPS213(PhanSo ps2_213) {
+        int a213 = tuSo213 * ps2_213.mauSo213 + ps2_213.tuSo213 * mauSo213;
+        int b213 = mauSo213 * ps2_213.mauSo213;
 
-        return new PhanSo(a, b);
+        return new PhanSo(a213, b213);
     }
 
-    // ham tru
-    public PhanSo truPS(PhanSo ps2) {
-        int a = tuSo * ps2.mauSo - ps2.tuSo * mauSo;
-        int b = mauSo * ps2.mauSo;
+    // Hàm trừ phân số
+    public PhanSo truPS213(PhanSo ps2_213) {
+        int a213 = tuSo213 * ps2_213.mauSo213 - ps2_213.tuSo213 * mauSo213;
+        int b213 = mauSo213 * ps2_213.mauSo213;
 
-        return new PhanSo(a, b);
+        return new PhanSo(a213, b213);
     }
 
-    // ham nhan
-    public PhanSo nhanPS(PhanSo ps2) {
-        int a = tuSo * ps2.tuSo;
-        int b = mauSo * ps2.mauSo;
+    // Hàm nhân phân số
+    public PhanSo nhanPS213(PhanSo ps2_213) {
+        int a213 = tuSo213 * ps2_213.tuSo213;
+        int b213 = mauSo213 * ps2_213.mauSo213;
 
-        return new PhanSo(a, b);
+        return new PhanSo(a213, b213);
     }
 
-    // ham chia
-    public PhanSo chiaPS(PhanSo ps2) {
-        int a = tuSo * ps2.mauSo;
-        int b = mauSo * ps2.tuSo;
+    // Hàm chia phân số
+    public PhanSo chiaPS213(PhanSo ps2_213) {
+        int a213 = tuSo213 * ps2_213.mauSo213;
+        int b213 = mauSo213 * ps2_213.tuSo213;
 
-        return new PhanSo(a, b);
+        return new PhanSo(a213, b213);
     }
 
-    // ham tim uscln
-    private int timUSCLN(int a, int b) {
-        int r = a % b;
+    // Tìm ước số chung lớn nhất
+    private int timUSCLN213(int a213, int b213) {
+        int r213 = a213 % b213;
 
-        while (r != 0) {
-            a = b;
-            b = r;
-            r = a % b;
+        while (r213 != 0) {
+            a213 = b213;
+            b213 = r213;
+            r213 = a213 % b213;
         }
 
-        return b;
+        return b213;
     }
 
-    // ham kiem tra phan so toi gian hay chua
-    public boolean kiemTraToiGian() {
-        if (timUSCLN(tuSo, mauSo) == 1) {
-            return true;
-        }
-        return false;
+    // Kiểm tra phân số tối giản
+    public boolean kiemTraToiGian213() {
+        return timUSCLN213(tuSo213, mauSo213) == 1;
     }
 
-    // ham toi gian
-    public void toiGianPS() {
-        int x = timUSCLN(tuSo, mauSo);
-
-        tuSo /= x;
-        mauSo /= x;
+    // Rút gọn phân số
+    public void toiGianPS213() {
+        int x213 = timUSCLN213(tuSo213, mauSo213);
+        tuSo213 /= x213;
+        mauSo213 /= x213;
     }
 }

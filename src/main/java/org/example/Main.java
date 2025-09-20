@@ -4,31 +4,30 @@ import org.example.Bai1.PhanSo;
 
 import java.util.Scanner;
 
-
 public class Main {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        PhanSo ps1=new PhanSo();
-        PhanSo ps2=new PhanSo();
-        PhanSo psTong =new PhanSo();
+        Scanner sc213 = new Scanner(System.in);
+        PhanSo ps1_213 = new PhanSo();
+        PhanSo ps2_213 = new PhanSo();
+        PhanSo psTong213 = new PhanSo();
 
-        // nhap phan so
+        // Nhập phân số
         System.out.println("Nhap vao phan so thu nhat:");
-        ps1.nhapPS(sc);
+        ps1_213.nhapPS213(sc213);
         System.out.println("Nhap vao phan so thu hai:");
-        ps2.nhapPS(sc);
+        ps2_213.nhapPS213(sc213);
 
-        // tinh tong 2 phan so
-        psTong=ps1.congPS(ps2);
+        // Tính tổng hai phân số
+        psTong213 = ps1_213.congPS213(ps2_213);
 
-        // hien thi phan so
+        // Hiển thị phân số
         System.out.println("\nPhan so thu nhat la:");
-        ps1.hienThiPS();
+        ps1_213.hienThiPS213();
         System.out.println("\nPhan so thu hai la:");
-        ps2.hienThiPS();
+        ps2_213.hienThiPS213();
         System.out.println("\nPhan so tong la:");
-        psTong.hienThiPS();
+        psTong213.hienThiPS213();
 
-        sc.close();
+        sc213.close();
     }
 }
