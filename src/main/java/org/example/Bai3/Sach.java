@@ -1,41 +1,46 @@
 package org.example.Bai3;
 
-
-
 import java.util.Scanner;
 
 public class Sach extends TaiLieu {
-    // thuoc tinh
-    private String tacGia;
-    private int soTrang;
+    // Thuộc tính
+    private String tacGia213;
+    private int soTrang213;
 
-    // phuong thuc
-    // ham khoi tao khong doi so
+    // Constructor không đối số
     public Sach() {
-
     }
 
-    // ham khoi tao co doi so
-    public Sach(String maTaiLieu, String tenNXB, int soBanPhatHanh, String tacGia, int soTrang) {
-        super(maTaiLieu, tenNXB, soBanPhatHanh);
-        this.tacGia = tacGia;
-        this.soTrang = soTrang;
+    // Constructor có đối số
+    public Sach(String maTaiLieu213, String tenNXB213, int soBanPhatHanh213, String tacGia213, int soTrang213) {
+        super(maTaiLieu213, tenNXB213, soBanPhatHanh213);
+        this.tacGia213 = tacGia213;
+        this.soTrang213 = soTrang213;
     }
 
-    // ham nhap
-    public void nhapThongTin(Scanner sc) {
-        super.nhapThongTin(sc);
+    // Hàm nhập thông tin
+    public void nhapThongTin213(Scanner sc213) {
+        super.nhapThongTin213(sc213);
         System.out.print("\tNhap tac gia: ");
-        tacGia = sc.nextLine();
+        tacGia213 = sc213.nextLine();
         System.out.print("\tNhap so trang: ");
-        soTrang = sc.nextInt();
-        sc.nextLine();
+        soTrang213 = sc213.nextInt();
+        sc213.nextLine(); // Clear buffer
     }
 
-    // ham hien thi
-    public void hienThiThongTin() {
-        super.hienThiThongTin();
-        System.out.println("\ttac gia: " + tacGia);
-        System.out.println("\tSo trang: " + soTrang);
+    // Hàm hiển thị thông tin
+    public void hienThiThongTin213() {
+        super.hienThiThongTin213();
+        System.out.println("\tTac gia: " + tacGia213);
+        System.out.println("\tSo trang: " + soTrang213);
+    }
+
+    // Getters nếu cần
+    public String getTacGia213() {
+        return tacGia213;
+    }
+
+    public int getSoTrang213() {
+        return soTrang213;
     }
 }

@@ -4,40 +4,43 @@ import java.util.Scanner;
 
 public class TaiLieu {
 
-    private String maTaiLieu;
-    private String tenNXB;
-    private int soBanPhatHanh;
+    private String maTaiLieu213;
+    private String tenNXB213;
+    private int soBanPhatHanh213;
 
-
+    // Constructor không đối số
     public TaiLieu() {
-
     }
 
-    public TaiLieu(String maTaiLieu, String tenNXB, int soBanPhatHanh) {
-        this.maTaiLieu = maTaiLieu;
-        this.tenNXB = tenNXB;
-        this.soBanPhatHanh = soBanPhatHanh;
+    // Constructor có đối số
+    public TaiLieu(String maTaiLieu213, String tenNXB213, int soBanPhatHanh213) {
+        this.maTaiLieu213 = maTaiLieu213;
+        this.tenNXB213 = tenNXB213;
+        this.soBanPhatHanh213 = soBanPhatHanh213;
     }
 
-
-    public void nhapThongTin(Scanner sc) {
+    // Nhập thông tin
+    public void nhapThongTin213(Scanner sc213) {
         System.out.print("\tNhap ma tai lieu: ");
-        maTaiLieu = sc.nextLine();
+        maTaiLieu213 = sc213.nextLine();
         System.out.print("\tNhap ten nha xuat ban: ");
-        tenNXB = sc.nextLine();
+        tenNXB213 = sc213.nextLine();
         System.out.print("\tNhap so ban phat hanh: ");
-        soBanPhatHanh = sc.nextInt();
-        sc.nextLine();
+        soBanPhatHanh213 = sc213.nextInt();
+        sc213.nextLine(); // Clear buffer
     }
 
-    public void hienThiThongTin() {
-        System.out.println("\tMa tai lieu: " + maTaiLieu);
-        System.out.println("\tTen nha xuat ban: " + tenNXB);
-        System.out.println("\tSo ban phat hanh: " + soBanPhatHanh);
+    // Hiển thị thông tin
+    public void hienThiThongTin213() {
+        System.out.println("\tMa tai lieu: " + maTaiLieu213);
+        System.out.println("\tTen nha xuat ban: " + tenNXB213);
+        System.out.println("\tSo ban phat hanh: " + soBanPhatHanh213);
     }
 
-    public String getMaTaiLieu() {
-        return maTaiLieu;
+    // Getter
+    public String getMaTaiLieu213() {
+        return maTaiLieu213;
     }
 
+    // (Nếu cần có thêm setter/getter khác, cũng thêm hậu tố 213)
 }

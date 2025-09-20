@@ -4,24 +4,25 @@ import org.example.Bai3.QuanLySach;
 
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc213 = new Scanner(System.in);
 
-        QuanLySach qls = new QuanLySach();
+        QuanLySach qls213 = new QuanLySach();
 
-        qls.nhapDanhSachTL(sc);
+        // Nhập danh sách tài liệu
+        qls213.nhapDanhSachTL213(sc213);
 
-        System.out.print("\n\nNhap vao loai tai lieu can tim: ");
-        String loai = sc.nextLine();
-        qls.timLoaiTL(loai);
+        // Tìm theo loại tài liệu
+        System.out.print("\n\nNhap vao loai tai lieu can tim (Sach/TapChi/Bao): ");
+        String loai213 = sc213.nextLine();
+        qls213.timLoaiTL213(loai213);
 
+        // Tìm theo mã tài liệu
         System.out.print("\n\nNhap vao ma tai lieu can tim: ");
-        String maTL = sc.nextLine();
-        qls.timMaTL(maTL);
+        String maTL213 = sc213.nextLine();
+        qls213.timMaTL213(maTL213);
 
-        sc.close();
+        sc213.close();
     }
 }
